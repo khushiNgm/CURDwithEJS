@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="/stylesheet/style.css">
+</head>
+<body>
+    <div class="w-screen h-screen bg-gray-900 p-10 text-white">
+        <div class="nav mb-10">
+        </div>
+      <h1 class="text-3xl tracking-tighter mb-3">Edit User</h1>
+    
+        <form action="/update/<%= user._id %>" method="post" class="mt-4">
+        <input type="text" name="name" placeholder="name" value="<%= user.name%>" class="bg-gray-700 px-5 py-3 outline-none m-1">
+        <input type="text" name="email" placeholder="email" value="<%= user.email%>"  class="bg-gray-700 px-5 py-3 outline-none m-1"> 
+        <input type="text" name="image" placeholder="img_url" value="<%= user.image%>" class="bg-gray-700 px-5 py-3 outline-none m-1">
+        <input type="submit" value="update user" class="bg-gray-800 px-5 py-3 outline-none m-1">
+    </form>
+    </div>
+</body>
+</html>
